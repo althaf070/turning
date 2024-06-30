@@ -7,80 +7,81 @@
   body {
     scrollbar-width: 2px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   a {
     text-decoration: none;
     color: inherit;
-  }
-  .navbar {
+}
+.navbar {
     z-index: 1000;
-  }
-  .extended,
-  .ex2 {
+}
+.extended,
+.ex2 {
     z-index: 11;
     background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
-  }
-  .extended {
+}
+.extended {
     width: 100vw; /* Make the dropdown menu full width */
     left: -198px !important; /* Align it to the left of the viewport */
     right: 0 !important; /* Ensure it stretches to the right */
-  }
-  .grid {
+}
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1.7fr;
     gap: 10px;
     padding: 20px;
     background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
     color: whitesmoke;
-  }
-  .gr2 {
+}
+.gr2 {
     grid-template-columns: 1fr 1fr 1.7fr;
-  }
-  .trd-ul {
+}
+.trd-ul {
     background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
     color: whitesmoke;
     width: 450px;
-  }
-  .trd-ul p {
+}
+.trd-ul p {
     text-align: start;
     margin-left: 12px;
-  }
-  hr {
+}
+hr {
     color: white;
-  }
-  .items {
+}
+.items {
     padding: 20px;
-  }
-  .item-img {
+}
+.item-img {
     border-radius: 12px;
     background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
     color: white;
     margin: 0;
     padding: 12px;
-  }
-  .bgcs {
+}
+.bgcs {
     background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
     height: 160px;
     width: 100px;
     z-index: 11;
-  }
-  .bgcs li {
+}
+.bgcs li {
     margin-top: 12px;
     margin-left: 6px;
-  }
-  .ex2 {
+}
+.ex2 {
     left: -315px !important;
     width: 100vw; /* Make the dropdown menu full width */
     right: 300px !important;
-  }
-  .parent-img {
+}
+.parent-img {
     width: 100%;
     object-fit: contain;
-  }
-  .parent-img img {
+}
+.parent-img img {
     width: 100%;
-  }
-  .child-banner {
+}
+.child-banner {
     width: 50%;
     position: absolute;
     left: 0;
@@ -88,71 +89,200 @@
     color: whitesmoke;
     margin-left: 38px;
     z-index: 1;
-  }
-  .child-banner h1 {
+}
+.child-banner h1 {
     font-size: 50px;
     letter-spacing: 2px;
-  }
-  .border-left-only {
+}
+.border-left-only {
     border-left: 2px solid darkblue;
     margin-left: 12px;
-  }
-
-.card {
-  padding: 18px;
-  margin-bottom: 12px;
+}
+.containercn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+.cards {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    padding: 6px;
+}
+.cards .cards-cn {
+    width: 100%;
+    height: 100%;
+    background-color: #393646;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cards.large {
+    width: 380px;
+    height: 550px;
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards.large img {
+    width: 100%;
+    height: 60%;
+}
+.percentage {
+    font-size: 2em;
+    font-weight: bold;
+}
+.info {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.description {
+    margin-top: 10px;
+    font-size: 1em;
+}
+.image {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.row-card {
+    display: grid;
+    margin-top: -250px;
+    height: 400px;
+}
+.row-card img {
+    height: 100%;
+    width: 100%;
+}
+.sec {
+    margin-left: -38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    background-color: #393646;
 }
 
+@media screen and (max-width: 1200px) {
+    .containercn {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .cards.large {
+        grid-column: span 2;
+    }
+}
 
-  @media screen and (max-width: 768px) {
-  
-    .extended {
-      left: 0;
-      right: 210px;
-      width: 85%;
+@media screen and (max-width: 768px) {
+    .containercn {
+      margin-top: 120px;
+       display: flex;
+       flex-direction: column;
     }
-    .grid {
-      display: flex;
-      flex-direction: column;
+    .cards {
+        width: 100%;
     }
-    .parent-img {
-      height: 100vh;
-      width: 100%;
+    .cards.large {
+        width: 100%;
+        height: 310px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 280px;
+
     }
-    .parent-img img {
+    .cards.large img{
+      height: 300px;
+    }
+    .cards.large .cards-cn{
       width: 100%;
       height: 100%;
-      object-fit: none;
+      padding: 12px;
+    }
+    .row-card {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 200px;
+      align-items: center;
+      justify-content: center;
+    }
+    .row-card img{
+      object-fit: cover;
+      margin-bottom: 32px;
+    }
+    .extended {
+        left: 0;
+        right: 210px;
+        width: 85%;
+    }
+  
+    .parent-img {
+        height: 100vh;
+        width: 100%;
+    }
+    .parent-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
     }
     .child-banner {
-      top: 300px;
+        top: 300px;
     }
     .child-banner h1 {
-      font-size: 30px;
-      letter-spacing: 2px;
+        font-size: 30px;
+        letter-spacing: 2px;
     }
     .extended,
-  .ex2 {
-    width: 100%;
-  }
-  .extended .ex2 > div{
-    width: 100%;
-  }
-  .trd-ul{
-    width: 150px;
-  }
-  .card-container{
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-  }
- 
-  }
-  @media screen and (max-width: 480px) {
+    .ex2 {
+        width: 100%;
+    }
+    .extended .ex2 > div {
+        width: 100%;
+    }
+    .trd-ul {
+        width: 150px;
+    }
+    .card-container {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+    .ai{
+      padding-top: 200px;
+    }
+    .sec{
+      width: 100%;
+      height: 200px;
+      margin-left: 6px;
+     
+    }
+    .profile{
+      width: 300px;
+    }
+    .onmd{
+   display: flex;
+   flex-direction: column;
+  margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .child-banner h1 {
-      font-size: 20px;
+        font-size: 20px;
     }
     .child-banner p {
-      font-size: 14px;
+        font-size: 14px;
     }
-  }
+}
