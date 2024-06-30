@@ -202,7 +202,7 @@ hr {
         flex-direction: row;
         margin-bottom: 280px;
         text-align: center;
-        margin-left: 80px;
+        margin-left: 13px;
     }
     iframe{
         width: 340px;
@@ -287,8 +287,15 @@ hr {
     }
     .flex{
         display: flex;
-        width: 100%;
+        width: 300px;
         flex-direction: column;
+    }
+    .flex{
+        width: 100%;
+        text-align: justify;
+    }
+    .flex img{
+        width: 300px;
     }
 }
 
