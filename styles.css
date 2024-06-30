@@ -196,20 +196,25 @@ hr {
         width: 100%;
     }
     .cards.large {
-        width: 250px;
-        height: 310px;
+        width: 320px;
+        height: 350px;
         display: flex;
         flex-direction: row;
         margin-bottom: 280px;
         text-align: center;
+        margin-left: 80px;
+    }
+    iframe{
+        width: 300px;
+        height: 300px;
     }
     .cards.large img{
-        width: 150px;
-      height: 230px;
+        width: 250px;
+      height: 250px;
     }
     .cards.large .cards-cn{
       width: 100%;
-      height: 230px;
+      height: 250px;
       padding: 12px;
     }
     .row-card {
