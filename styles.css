@@ -101,9 +101,8 @@ hr {
 .containercn {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+   
     gap: 20px;
-    max-width: 1200px;
     width: 100%;
 }
 .cards {
@@ -173,7 +172,10 @@ hr {
     text-align: justify;
     background-color: #393646;
 }
-
+.ai{
+    padding: 0;
+    margin: 0;
+}
 @media screen and (max-width: 1200px) {
     .containercn {
         grid-template-columns: repeat(2, 1fr);
@@ -194,19 +196,20 @@ hr {
         width: 100%;
     }
     .cards.large {
-        width: 100%;
+        width: 250px;
         height: 310px;
         display: flex;
         flex-direction: row;
         margin-bottom: 280px;
-
+        text-align: center;
     }
     .cards.large img{
-      height: 300px;
+        width: 150px;
+      height: 230px;
     }
     .cards.large .cards-cn{
       width: 100%;
-      height: 100%;
+      height: 230px;
       padding: 12px;
     }
     .row-card {
